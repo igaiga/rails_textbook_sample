@@ -20,7 +20,7 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
       post entries_url, params: { entry: { description: @entry.description, picture: @entry.picture, title: @entry.title } }
     end
 
-    assert_redirected_to entry_path(Entry.last)
+    assert_redirected_to entry_url(Entry.last)
   end
 
   test "should show entry" do
@@ -35,7 +35,7 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should update entry" do
     patch entry_url(@entry), params: { entry: { description: @entry.description, picture: @entry.picture, title: @entry.title } }
-    assert_redirected_to entry_path(@entry)
+    assert_redirected_to entry_url(@entry)
   end
 
   test "should destroy entry" do
@@ -43,6 +43,6 @@ class EntriesControllerTest < ActionDispatch::IntegrationTest
       delete entry_url(@entry)
     end
 
-    assert_redirected_to entries_path
+    assert_redirected_to entries_url
   end
 end
