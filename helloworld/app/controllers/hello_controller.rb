@@ -1,5 +1,5 @@
 class HelloController < ApplicationController
   def index
-    @time = Time.current.in_time_zone('Tokyo')
+    @time = Time.current
   end
 end
