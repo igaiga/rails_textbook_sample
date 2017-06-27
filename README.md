@@ -2,16 +2,36 @@
 
 ## rails new
 - rails new books_app
-- cd books_app
 - rails g scaffold book title:string memo:text
 - rails db:migrate
 
-## カラム増
+## author カラム増
 - rails g migration AddAuthorToBooks author:string
 - rails db:migrate
 - app/views/books/_form.html.erb 更新
+```
+  <div class="field">
+    <%= form.label :author %>
+    <%= form.text_area :author, id: :book_author %>
+  </div>
+```
+
 - app/views/books/show.html.erb 更新
+```
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+```
+
 - app/views/books/index.html.erb 更新
+```
+      <th>Author</th>
+```
+```
+        <td><%= book.author %></td>
+```
+
 - app/controllers/books_controller.rb strongparams更新
 
 ## 画像投稿
@@ -22,8 +42,28 @@
 - rails g uploader Picture
 - app/models/book.rb mount_uploader :picture, PictureUploader
 - app/views/books/_form.html.erb file_field
-- app/views/books/show.html.erb <%= image_tag(@book.picture_url) if @book.picture.present? %>
+```
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture, id: :book_picture %>
+  </div>
+```
+
+- app/views/books/show.html.erb
+```
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@book.picture_url) if @book.picture.present? %>
+</p>
+```
+
 - app/views/books/index.html.erb picture追加
+```
+      <th>Picture</th>
+```
+```
+        <td><%= book.picture %></td>
+```
 
 # 一番小さなRailsアプリ
 - rails new helloworld
