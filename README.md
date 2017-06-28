@@ -1,4 +1,19 @@
+# 一番小さなRailsアプリ
+- rails new helloworld
+- rails g controller hello index
+- app/views/hello/index.html.erb
+  - <p>Hello world!</p>
+  - <p>現在時刻: <%= @time %></p>
+- app/controllers/hello_controller.rb @time = Time.current.in_time_zone('Asia/Tokyo')
+
 # Webアプリをまずはつくってみよう, CRUDの基礎とindexアクション
+- rails new books_app
+- rails g scaffold book title memo:text author picture
+- rails db:migrate
+
+
+
+# CRUDの基礎とindexアクション ステップ実行(オプション)
 
 ## rails new
 - rails new books_app
@@ -64,11 +79,3 @@
 ```
         <td><%= book.picture %></td>
 ```
-
-# 一番小さなRailsアプリ
-- rails new helloworld
-- rails g controller hello index
-- app/views/hello/index.html.erb
-  - <p>Hello world!</p>
-  - <p>現在時刻: <%= @time %></p>
-- app/controllers/hello_controller.rb @time = Time.current.in_time_zone('Asia/Tokyo')
