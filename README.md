@@ -17,45 +17,18 @@
 
 ## rails new
 - rails new books_app
-- rails g scaffold book title:string memo:text
+- rails g scaffold book title memo:text author
 - rails db:migrate
-
-## author カラム増
-- rails g migration AddAuthorToBooks author:string
-- rails db:migrate
-- app/views/books/_form.html.erb 更新
-```
-  <div class="field">
-    <%= form.label :author %>
-    <%= form.text_area :author, id: :book_author %>
-  </div>
-```
-
-- app/views/books/show.html.erb 更新
-```
-<p>
-  <strong>Author:</strong>
-  <%= @book.author %>
-</p>
-```
-
-- app/views/books/index.html.erb 更新
-```
-      <th>Author</th>
-```
-```
-        <td><%= book.author %></td>
-```
-
-- app/controllers/books_controller.rb strongparams更新
 
 ## 画像投稿
 - rails g migration AddPictureToBooks picture:string
 - rails db:migrate
 - gem 'carrierwave' 追加
 - bundle
+- bin/spring stop
 - rails g uploader Picture
 - app/models/book.rb mount_uploader :picture, PictureUploader
+- app/controller/books_controller.rb strong paramters add picture
 - app/views/books/_form.html.erb file_field
 ```
   <div class="field">
