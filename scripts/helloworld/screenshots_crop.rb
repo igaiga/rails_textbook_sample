@@ -6,9 +6,9 @@ end
 
 def height(file_path)
   case file_path
-  when /hello_index_00_generated/
+  when /hello_index/
     300
-  when /hello_index_01_helloworld/
+  when /hello_world/
     120
   else
     200

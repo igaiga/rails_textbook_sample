@@ -19,28 +19,28 @@ cd ..
 # screenshot for generated "Hello#index"
 cd helloworld
 bundle exec rspec spec/systems/hello_spec.rb
-cp tmp/capybara/hello_index.png ../screenshots/hello_index_00_generated.png
+cp tmp/capybara/hello_index.png ../screenshots/hello_index.png
 cd ..
 
 # screenshot for "Helloworld!"
 ruby edit_01_view_hello_index_helloworld.rb
 cd helloworld
 bundle exec rspec spec/systems/hello_spec.rb
-cp tmp/capybara/hello_index.png ../screenshots/hello_index_01_helloworld.png
+cp tmp/capybara/hello_index.png ../screenshots/hello_world.png
 cd ..
 
 # screenshot for "Time.current UTC"
 ruby edit_02_view_hello_index_time_current.rb
 cd helloworld
 bundle exec rspec spec/systems/hello_spec.rb
-cp tmp/capybara/hello_index.png ../screenshots/hello_index_02_time_utc.png
+cp tmp/capybara/hello_index.png ../screenshots/time_utc.png
 cd ..
 
 # screenshot for "Time.current JST"
 ruby edit_03_view_hello_index_time_zone_tokyo.rb
 cd helloworld
 bundle exec rspec spec/systems/hello_spec.rb
-cp tmp/capybara/hello_index.png ../screenshots/hello_index_03_time_jst.png
+cp tmp/capybara/hello_index.png ../screenshots/time_jst.png
 cd ..
 
 # Refactoring (no new screenshots)
