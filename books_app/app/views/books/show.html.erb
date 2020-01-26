@@ -10,12 +10,12 @@
   <%= @book.memo %>
 </p>
 
-<p>
+<p>  
   <strong>Author:</strong>
   <%= @book.author %>
 </p>
 
-<p>
+<p>  
   <strong>Picture:</strong>
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
