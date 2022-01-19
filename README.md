@@ -1,7 +1,16 @@
-# Versions
+# RubyとRailsのバージョン
 
+## master, rails701_ruby310
+
+- https://github.com/igaiga/rails_textbook_sample/releases/tag/rails701_ruby310
 - Ruby 3.1.0
 - Rails 7.0.1
+
+## rails6021_ruby270
+
+- https://github.com/igaiga/rails_textbook_sample/releases/tag/rails6021_ruby270
+- Ruby 2.7.0
+- Rails 6.0.2.1
 
 # 一番小さなRailsアプリ
 - rails new helloworld
@@ -17,8 +26,6 @@
 - rails new books_app
 - rails g scaffold book title memo:text author picture
 - rails db:migrate
-
-
 
 # CRUDの基礎とindexアクション ステップ実行(オプション)
 
