@@ -1,3 +1,8 @@
+# Versions
+
+- Ruby 3.1.0
+- Rails 7.0.1
+
 # 一番小さなRailsアプリ
 - rails new helloworld
 - cd helloworld
@@ -39,15 +44,15 @@
   </div>
 ```
 
-- app/views/books/show.html.erb
+- app/views/books/_book.html.erb
 ```
 <p>
   <strong>Picture:</strong>
-  <%= image_tag(@book.picture_url) if @book.picture.present? %>
+  <%= image_tag(book.picture_url) if book.picture.present? %>
 </p>
 ```
 
-- app/views/books/index.html.erb picture追加
+- app/views/books/_book.html.erb picture追加
 ```
       <th>Picture</th>
 ```
