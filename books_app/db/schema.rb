@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_10_235350) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_05_01_234023) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.text "memo"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "author"
     t.string "picture"
   end
