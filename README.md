@@ -5,7 +5,13 @@
 
 # RubyとRailsのバージョン
 
-## master, rails701_ruby310 tag
+## master, rails7043_ruby322 tag
+
+- https://github.com/igaiga/rails_textbook_sample/releases/tag/rails7043_ruby322
+- Ruby 3.2.2
+- Rails 7.0.4.3
+
+## rails701_ruby310 tag
 
 - https://github.com/igaiga/rails_textbook_sample/releases/tag/rails701_ruby310
 - Ruby 3.1.0
