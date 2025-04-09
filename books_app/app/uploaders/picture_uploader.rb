@@ -1,7 +1,8 @@
 class PictureUploader < CarrierWave::Uploader::Base
-  # Include RMagick or MiniMagick support:
+  # Include RMagick, MiniMagick, or Vips support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
+  # include CarrierWave::Vips
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -42,6 +43,6 @@ class PictureUploader < CarrierWave::Uploader::Base
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
   # def filename
-  #   "something.jpg" if original_filename
+  #   "something.jpg"
   # end
 end
