@@ -5,7 +5,13 @@
 
 # RubyとRailsのバージョン
 
-## master, rails7043_ruby322 tag
+## master, rails802_ruby342 tag
+
+- https://github.com/igaiga/rails_textbook_sample/releases/tag/rails802_ruby342
+- Ruby 3.4.2
+- Rails 8.0.2
+
+## rails7043_ruby322 tag
 
 - https://github.com/igaiga/rails_textbook_sample/releases/tag/rails7043_ruby322
 - Ruby 3.2.2
